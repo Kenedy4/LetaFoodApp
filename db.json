@@ -1,0 +1,8 @@
+{
+  "meals": [
+    { "id": 1, "category": "Breakfast", "name": "Pancakes", "price": 300 },
+    { "id": 2, "category": "Lunch", "name": "Burger", "price": 250 },
+    { "id": 3, "category": "Supper", "name": "Pizza", "price": 400 },
+    { "id": 4, "category": "Breakfast", "name": "Smocha", "price": 100 }
+  ]
+}
