@@ -5,7 +5,7 @@ const MealCategory = ({ filterMeals }) => {
     <div className="meal-categories">
       <button onClick={() => filterMeals('Breakfast')}>Breakfast</button>
       <button onClick={() => filterMeals('Lunch')}>Lunch</button>
-      <button onClick={() => filterMeals('Supper')}>Supper</button>
+      <button onClick={() => filterMeals('Dinner')}>Dinner</button>
     </div>
   );
 };

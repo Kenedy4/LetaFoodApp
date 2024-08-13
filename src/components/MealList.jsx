@@ -2,25 +2,56 @@ import React, { useEffect, useState } from 'react';
 import MealCard from './MealCard';
 
 const MealList = ({ category, addToCart }) => {
+  const [allMeals, setAllMeals] = useState([]);
   const [filteredMeals, setFilteredMeals] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/meals')
-      .then((response) => response.json())
-      .then((data) => {
-        if (category) {
-          setFilteredMeals(data.filter((meal) => meal.category === category));
-        } else {
-          setFilteredMeals(data);
-        }
-      });
-  }, [category]);
+    const fetchMeals = async () => {
+      try {
+        const response = await Promise.all([
+          fetch('http://localhost:3000/breakfast'),
+          fetch('http://localhost:3000/lunch'),
+          fetch('http://localhost:3000/dinner'),
+        ]);
+
+        const [breakfastData, lunchData, dinnerData] = await Promise.all(
+          response.map((res) => res.json())
+        );
+
+        // Combine all meals into a single array
+        const combinedMeals = [
+          ...breakfastData.map((meal) => ({ ...meal, category: 'Breakfast' })),
+          ...lunchData.map((meal) => ({ ...meal, category: 'Lunch' })),
+          ...dinnerData.map((meal) => ({ ...meal, category: 'Dinner' })),
+        ];
+
+        setAllMeals(combinedMeals);
+        setFilteredMeals(combinedMeals); 
+      } catch (error) {
+        console.error('Error fetching meals:', error);
+      }
+    };
+
+    fetchMeals();
+  }, []);
+
+  useEffect(() => {
+    if (category) {
+      setFilteredMeals(allMeals.filter((meal) => meal.category === category));
+    } else {
+      setFilteredMeals(allMeals);
+    }
+  }, [category, allMeals]);
 
   return (
     <div className="meal-list">
       <div className="meal-cards">
         {filteredMeals.map((meal) => (
-          <MealCard key={meal.id} meal={meal} addToCart={addToCart} />
+          <MealCard
+            key={`${meal.category}-${meal.id}`} 
+            meal={meal}
+            addToCart={addToCart}
+          />
         ))}
       </div>
     </div>
