@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-function AboutUs() {
+function Home() {
   return (
     <div className='homepage'>
       <h1>Welcome to LetaFoodApp</h1>
@@ -10,7 +10,7 @@ function AboutUs() {
       <p>Feel free to reach out if you have any questions or need assistance.</p>
       <p>Thank you for visiting!</p>
     </div>
-  )
+  );
 }
 
-export default AboutUs
+export default Home;

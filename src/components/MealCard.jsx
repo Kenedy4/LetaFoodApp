@@ -13,3 +13,4 @@ const MealCard = ({ meal, addToCart }) => {
 };
 
 export default MealCard;
+

@@ -11,12 +11,107 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-/*HomePage Styles */
-.home-page {
- 
+nav {
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
 }
 
-/* Navbar Styles */
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+
+nav .logo img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+nav .logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a, nav ul li button {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+nav ul li button:hover, nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.login {
+  padding: 20px;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login form div {
+  margin-bottom: 10px;
+}
+
+.login form label {
+  margin-bottom: 5px;
+}
+
+.login form input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login form button:hover {
+  background-color: #45a049;
+}
+/* Navbar Styles
 nav {
   background-color: #333;
   padding: 10px;
@@ -50,7 +145,7 @@ nav ul li a {
 
 nav ul li a:hover {
   text-decoration: underline;
-}
+} */
 
 /* Meal Category Buttons */
 .meal-categories {
@@ -119,7 +214,7 @@ nav ul li a:hover {
 .meal-card button:hover {
   background-color: #45a049;
 }
-.meal-image{
+.meal-image {
   width: 100%;
   height: 150px;
   object-fit: cover;
@@ -135,9 +230,8 @@ nav ul li a:hover {
   padding: 20px;
   border: 1px solid #ccc;
   z-index: 1000;
-
 }
-.cart.button{
+.cart.button {
   margin-right: 10px;
   background-color: #4caf50;
   color: #ccc;
@@ -160,16 +254,13 @@ nav ul li a:hover {
 
 .checkout-modal h3 {
   margin-bottom: 20px;
-
 }
 
 .checkout-modal button {
   margin-right: 10px;
   background-color: #45a049;
   color: #ccc;
-
 }
-
 
 /* Footer Styles */
 footer {

@@ -19,7 +19,7 @@ const Cart = ({ cartItems, removeFromCart }) => {
       <h2>Your Cart</h2>
       {cartItems.map((item, index) => (
         <div key={index} className="cart-item">
-          <span>{item.name} - ${item.price}</span>
+          <span>{item.name} - Kes{item.price}</span>
           <button onClick={() => removeFromCart(item)}>Remove</button>
         </div>
       ))}
@@ -45,3 +45,4 @@ const Cart = ({ cartItems, removeFromCart }) => {
 };
 
 export default Cart;
+

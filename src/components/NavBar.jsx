@@ -1,17 +1,23 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ isAuthenticated, handleLogout }) => {
   return (
     <nav>
       <div className="logo">
-        <img src="logo.png" alt="LetaFood Logo" />
+        <img src="public/assets/logo.png" alt="LetaFood Logo" />
         <h1>LetaFood</h1>
       </div>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Our Services</a></li>
-        <li><a href="#contactus">Contact Us</a></li>
-        <li><a href="#login">Login</a></li>
+        <li><Link to="/home">Home</Link></li>
+        <li><Link to="/services">Our Services</Link></li>
+        <li>
+          {isAuthenticated ? (
+            <button onClick={handleLogout}>Logout</button>
+          ) : (
+            <Link to="/login">Login</Link>
+          )}
+        </li>
       </ul>
     </nav>
   );
