@@ -8,7 +8,7 @@ const Cart = ({ cartItems }) => {
       <h2>Your Cart</h2>
       {cartItems.map((item, index) => (
         <div key={index} className="cart-item">
-          <span>{item.name} - ${item.price}</span>
+          <span>{item.name} - kes{item.price}</span>
         </div>
       ))}
       <h3>Total: Kes{totalAmount}</h3>
