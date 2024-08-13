@@ -9,8 +9,8 @@ function App() {
   const [category, setCategory] = useState('');
   const [cartItems, setCartItems] = useState([]);
 
-  const filterMeals = (category) => {
-    setCategory(category);
+  const handleFilterMeals = (selectedCategory) => {
+    setCategory(selectedCategory);
   };
 
   const addToCart = (meal) => {
@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <MealCategory filterMeals={filterMeals} />
+      <MealCategory filterMeals={handleFilterMeals} />
       <MealList category={category} addToCart={addToCart} />
       <Cart cartItems={cartItems} />
       <Footer />

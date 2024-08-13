@@ -115,6 +115,11 @@ nav ul li a:hover {
 .meal-card button:hover {
   background-color: #45a049;
 }
+.meal-image{
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
 
 /* Cart Styles */
 .cart {
