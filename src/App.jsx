@@ -9,20 +9,27 @@ function App() {
   const [category, setCategory] = useState('');
   const [cartItems, setCartItems] = useState([]);
 
-  const filterMeals = (category) => {
-    setCategory(category);
+  const handleFilterMeals = (selectedCategory) => {
+    setCategory(selectedCategory);
   };
 
   const addToCart = (meal) => {
     setCartItems([...cartItems, meal]);
   };
 
+  const removeFromCart = (meal) => {
+    setCartItems(cartItems.filter((item) => item.id !== meal.id));
+  };
+
+
+
+  
   return (
     <div className="App">
       <NavBar />
-      <MealCategory filterMeals={filterMeals} />
+      <MealCategory filterMeals={handleFilterMeals} />
       <MealList category={category} addToCart={addToCart} />
-      <Cart cartItems={cartItems} />
+      <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
       <Footer />
     </div>
   );
