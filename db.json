@@ -3,42 +3,42 @@
     {
       "id": "1",
       "name": "Buns",
-      "image": "/assets/assets/breakfast1.png",
+      "image": "/assets/breakfast1.png",
       "description": "A tasty breakfast buns with eggs and bacon",
       "price": 200
     },
     {
       "id": "2",
       "name": "Tea",
-      "image": "/assets/assets/breakfast1.png",
+      "image": "/assets/breakfast2.png",
       "description": "A cup of coffee with toast",
       "price": 600
     },
     {
       "id": "3",
       "name": "Croissants",
-      "image": "/assets/assets/breakfast3.png",
+      "image": "/assets/breakfast3.png",
       "description": "Croissants with coffee and tea",
       "price": 500
     },
     {
       "id": "4",
       "name": "Bread",
-      "image": "/assets/assets/breakfast4.png",
+      "image": "/assets/breakfast4.png",
       "description": "Bread cakes with coffee",
       "price": 700
     },
     {
       "id": "5",
       "name": "Scrambled Eggs",
-      "image": "/assets/assets/breakfast5.png",
+      "image": "/assets/breakfast5.png",
       "description": "Scrambled eggs, bacon with juice",
       "price": 450
     },
     {
       "id": "6",
       "name": "Buggets",
-      "image": "/assets/assets/breakfast6.png",
+      "image": "/assets/breakfast6.png",
       "description": "Buggets with coffee and juice",
       "price": 1600
     }
@@ -47,42 +47,42 @@
     {
       "id": "1",
       "name": "Matoke",
-      "image": "/assets/assets/lunch1.jpg",
+      "image": "/assets/lunch1.jpg",
       "description": "Matoke with meat and some beetroot fruits",
       "price": 600
     },
     {
       "id": "2",
       "name": "Meat Choma",
-      "image": "/assets/assets/lunch2.jpg",
+      "image": "/assets/lunch2.jpg",
       "description": "Meat choma with potatoes and some vegetables",
       "price": 1500
     },
     {
       "id": "3",
       "name": "Rice Mix",
-      "image": "/assets/assets/lunch3.jpg",
+      "image": "/assets/lunch3.jpg",
       "description": "Rice with peas and meat",
       "price": 700
     },
     {
       "id": "4",
       "name": "Rice Chicken",
-      "image": "/assets/assets/lunch4.jpg",
+      "image": "/assets/lunch4.jpg",
       "description": "Rice chicken with an egg and salad",
       "price": 2000
     },
     {
       "id": "5",
       "name": "Rice Potatoes",
-      "image": "/assets/assets/lunch5.jpg",
+      "image": "/assets/lunch5.jpg",
       "description": "White rice with potatoes and some meat",
       "price": 800
     },
     {
       "id": "6",
       "name": "Ugali Mixed",
-      "image": "/assets/assets/lunch6.jpg",
+      "image": "/assets/lunch6.jpg",
       "description": "Ugali with some vegetables",
       "price": 750
     }
@@ -91,42 +91,42 @@
     {
       "id": "1",
       "name": "Shrimps Stew",
-      "image": "/assets/assets/dinner1.jpg",
+      "image": "/assets/dinner1.jpg",
       "description": "Shrimps with some okra stew",
       "price": 1500
     },
     {
       "id": "2",
       "name": "Ugali Fish",
-      "image": "/assets/assets/dinner2.jpg",
+      "image": "/assets/dinner2.jpg",
       "description": "A plate of fish, ugali and some vegetables",
       "price": 2400
     },
     {
       "id": "3",
       "name": "Ugali Stew",
-      "image": "/assets/assets/dinner3.jpg",
+      "image": "/assets/dinner3.jpg",
       "description": "Ugali and some stew",
       "price": 750
     },
     {
       "id": "4",
       "name": "Rice and Chicken",
-      "image": "/assets/assets/dinner4.jpg",
+      "image": "/assets/dinner4.jpg",
       "description": "A plate of rice and chicken",
       "price": 650
     },
     {
       "id": "5",
       "name": "White Rice and Vegetables",
-      "image": "/assets/assets/dinner5.jpg",
+      "image": "/assets/dinner5.jpg",
       "description": "A plate of white rice and vegetables",
       "price": 700
     },
     {
       "id": "6",
       "name": "Fish Rice",
-      "image": "/assets/assets/dinner6.jpg",
+      "image": "/assets/dinner6.jpg",
       "description": "A plate of fish and rice",
       "price": 800
     }

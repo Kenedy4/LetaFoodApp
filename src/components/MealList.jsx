@@ -26,7 +26,8 @@ const MealList = ({ category, addToCart }) => {
         ];
 
         setAllMeals(combinedMeals);
-        setFilteredMeals(combinedMeals); 
+
+        setFilteredMeals(combinedMeals); // Display all meals initially
       } catch (error) {
         console.error('Error fetching meals:', error);
       }

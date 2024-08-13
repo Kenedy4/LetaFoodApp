@@ -17,12 +17,19 @@ function App() {
     setCartItems([...cartItems, meal]);
   };
 
+  const removeFromCart = (meal) => {
+    setCartItems(cartItems.filter((item) => item.id !== meal.id));
+  };
+
+
+
+  
   return (
     <div className="App">
       <NavBar />
       <MealCategory filterMeals={handleFilterMeals} />
       <MealList category={category} addToCart={addToCart} />
-      <Cart cartItems={cartItems} />
+      <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
       <Footer />
     </div>
   );
