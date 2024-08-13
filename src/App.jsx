@@ -8,21 +8,26 @@ import Footer from './components/Footer';
 function App() {
   const [category, setCategory] = useState('');
   const [cartItems, setCartItems] = useState([]);
+  const addToCart = (meal) => {
+    setCartItems([...cartItems, meal]);
+  };
+
+  const removeFromCart = (meal) => {
+    setCartItems(cartItems.filter((item) => item.id !== meal.id));
+  };
+
 
   const handleFilterMeals = (selectedCategory) => {
     setCategory(selectedCategory);
   };
 
-  const addToCart = (meal) => {
-    setCartItems([...cartItems, meal]);
-  };
-
+  
   return (
     <div className="App">
       <NavBar />
       <MealCategory filterMeals={handleFilterMeals} />
       <MealList category={category} addToCart={addToCart} />
-      <Cart cartItems={cartItems} />
+      <Cart cartItems={cartItems} removeFromCart={removeFromCart} />
       <Footer />
     </div>
   );
