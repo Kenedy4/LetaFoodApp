@@ -11,6 +11,10 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+/*HomePage Styles */
+.home-page {
+ 
+}
 
 /* Navbar Styles */
 nav {

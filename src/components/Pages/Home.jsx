@@ -1,0 +1,16 @@
+import React from 'react'
+
+function AboutUs() {
+  return (
+    <div className='homepage'>
+      <h1>Welcome to LetaFoodApp</h1>
+      <img src="assets/homepage.jpg" alt="letafood" />
+      <p>This is the about us page. We serve delicious, locally-sourced meals.</p>
+      <p>Our team consists of experienced chefs and passionate customers.</p>
+      <p>Feel free to reach out if you have any questions or need assistance.</p>
+      <p>Thank you for visiting!</p>
+    </div>
+  )
+}
+
+export default AboutUs
