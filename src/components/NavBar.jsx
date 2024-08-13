@@ -5,7 +5,7 @@ const NavBar = ({ isAuthenticated, handleLogout }) => {
     return (
         <nav className="navbar">
             <div className="logo">
-                <img src="public/assets/logo.png" alt="LetaFood Logo" />
+                {/* <img src="public/assets/logo.png" alt="LetaFood Logo" /> */}
                 <h1>LetaFood</h1>
             </div>
             <ul className="nav-links">

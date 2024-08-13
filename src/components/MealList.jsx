@@ -47,7 +47,7 @@ const MealList = ({ category, addToCart }) => {
   return (
     <div className="meal-list">
       <div className="meal-cards">
-        <h2>Menu List</h2>
+      
         {filteredMeals.map((meal) => (
           <MealCard
             key={`${meal.category}-${meal.id}`} 
