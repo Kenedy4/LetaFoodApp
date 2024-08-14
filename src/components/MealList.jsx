@@ -9,9 +9,9 @@ const MealList = ({ category, addToCart }) => {
     const fetchMeals = async () => {
       try {
         const response = await Promise.all([
-          fetch('http://localhost:3001/breakfast'),
-          fetch('http://localhost:3001/lunch'),
-          fetch('http://localhost:3001/dinner'),
+          fetch(`https://fooddata-1.onrender.com/breakfast`),
+           fetch('https://fooddata-1.onrender.com/lunch'),
+           fetch('https://fooddata-1.onrender.com/dinner'),
         ]);
 
         const [breakfastData, lunchData, dinnerData] = await Promise.all(
