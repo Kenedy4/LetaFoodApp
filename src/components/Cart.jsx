@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Cart = ({ cartItems, removeFromCart, clearCart }) => {
     const [isCheckoutOpen, setIsCheckoutOpen] = useState(false);
+    const navigate = useNavigate();
 
     const totalAmount = cartItems.reduce((total, item) => total + item.price, 0);
 
@@ -13,6 +15,7 @@ const Cart = ({ cartItems, removeFromCart, clearCart }) => {
         alert("Thank you for shopping with us: delivery will be done within 2-3hrs");
         clearCart(); // Clear the cart
         setIsCheckoutOpen(false);
+        navigate('/services'); // Redirect to MealList
     };
 
     return (
@@ -53,7 +56,7 @@ const Cart = ({ cartItems, removeFromCart, clearCart }) => {
                         ))}
                     </ul>
                     <h3>Total Amount: Kes {totalAmount}</h3>
-                    <button onClick={handleConfirmOrder}>Confirm and Clear Cart</button>
+                    <button onClick={handleConfirmOrder}>Confirm your Order</button>
                     <button onClick={() => setIsCheckoutOpen(false)}>Cancel Order</button>
                 </div>
             )}
