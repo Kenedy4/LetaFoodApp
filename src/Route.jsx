@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import Home from './components/Pages/Home'; 
+import Home from './components/Pages/Home';
 import Login from './components/Pages/Login';
 import MealCategory from './components/MealCategory';
 import MealList from './components/MealList';
@@ -28,3 +28,4 @@ const AppRoutes = ({ category, handleFilterMeals, addToCart, cartItems, removeFr
 };
 
 export default AppRoutes;
+  
