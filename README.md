@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+# LetaFoodApp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+LetaFoodApp is a dynamic food delivery application built with React. It allows users to browse meal categories, manage their cart, and authenticate their accounts. This application is designed to enhance the food ordering experience by providing an intuitive user interface and seamless navigation.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Meal Categories:** Filter meals based on selected categories.
+- **Cart Management:** Add, remove, and clear items in the cart.
+- **User Authentication:** Login and logout functionality.
+- **Responsive Design:** Optimized for various devices.
+- **Router Integration:** Navigable pages using React Router.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Cart Component 
+ The Cart component is an essential part of the LetaFoodApp, enabling users to manage their meal orders, view prices, and proceed to checkout. It provides an intuitive interface for handling cart items and confirming orders.
+  ## Overview 
+ The Cart component allows users to:
+  - View a list of selected meal items.
+  - See the total cost of the items in the cart.
+  - Remove items from the cart.
+  - Open a checkout summary for order confirmation.
+  - Confirm orders and clear the cart after checkout.
+  ## Features- 
+**Display Cart Items:
+**List of meals added to the cart with their prices. -
+**Total Amount Calculation
+:** Calculates the total price of items in the cart. -
+**Remove Items:** Option to remove individual meal items from the cart. - **Checkout Process:** - 
+Opens a summary of items for final confirmation.
+  - Alerts the user with an order confirmation message.
+  - Clears the cart upon successful order confirmation and redirects to the meal list.
+  ## Usage 
+ To use the Cart component, ensure the following props are passed: - **cartItems**:
+ An array of meal objects is currently in the cart. Each meal object should have at least a `name` and a `price`. -
+**removeFromCart**: A function to handle the removal of a meal from the cart. -
+**clearCart**: A function to clear all items from the cart.  
 
-### `npm test`
+# NavBar Component 
+ The NavBar component is a crucial part of the LetaFoodApp, providing user navigation and authentication controls. It allows users to access different application sections and manage their authentication status easily.   
+## Technologies Used
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   The NavBar component includes: -
 
-### `npm run build`
+**Logo:** Displays the application logo or name. -
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Navigation Links:**Provides links to key sections of the app, including Home and Our Services. -
+**Authentication Controls:** Displays a Logout button when the user is authenticated, or a Login link when they are not.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ## Features -
+**Dynamic Navigation:** The links in the NavBar adapt based on the user's authentication status. -
+**Logout Functionality:** Users can log out, which will trigger the provided `handleLogout` function. - 
+**Responsive Design:** The NavBar is designed to be user-friendly and responsive.   
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Footer Component 
 
-### `npm run eject`
+ The Footer component of the LetaFoodApp provides essential information about the application and its management team. It is designed to enhance the user experience by presenting copyright information and details about the team behind the application.
+  ## Overview
+The Footer component includes: - 
+**Copyright Notice:** Displays the copyright information for the application. - **Management Team Information:
+** Lists the key members of the management team along with their roles.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  ## Features - 
+**Copyright Information:** Clearly states the ownership and rights for the application. -
+**Team Introduction:** Introduces the management team members with their respective roles, fostering transparency and trust.
+  ## Usage 
+ The Footer component does not require any props and can be directly included in your application layout.   
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# MealCard Component 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ The MealCard component is a key part of the LetaFoodApp that displays individual meal items, allowing users to view details and add meals to their cart. This component enhances the user experience by providing a clear and interactive way to browse meal options
+. ## Overview
+The MealCard component includes: -
+**Meal Image:** Displays a visual representation of the meal. -
+**Meal Name:**
+Shows the name of the meal. -
+**Meal Description:** Provides a brief description of the meal. -
+**Price Information:** Displays the price of the meal. -
+**Add to Cart Button:** Allows users to add the meal to their shopping cart.
+  ## Features - 
+**Dynamic Meal Display:** Presents meal information dynamically based on the data passed to the component. -
+**Interactive Cart Functionality:** Users can easily add meals to their cart with a single click.
+   ## Usage 
+ To use the MealCard component, ensure the following props are passed: - **meal**: An object containing the meal's details, including `image`, `name`, `description`, `price`, and `id`. -
+**addToCart**: A function that handles the addition of the meal to the cart.   
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# MealCategory Component
 
-## Learn More
+The MealCategory component is an integral part of the LetaFoodApp, allowing users to filter meals based on categories such as Breakfast, Lunch, and Dinner. This component also provides a link to the cart, enabling users to view their selected items easily.
+  ## Overview
+The MealCategory component includes: - 
+**Category Buttons:** Three buttons for filtering meals by category: Breakfast, Lunch, and Dinner. - 
+**Cart Link:** A link that directs users to the cart page, displaying the number of items currently in the cart. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  ## Features - 
+**Dynamic Meal Filtering:** Users can filter meals by selecting different categories. -
+**Cart Overview:** Displays the total number of items in the cart, making it easy for users to access their selections.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  ## Usage 
+ To use the MealCategory component, ensure the following props are passed: - **filterMeals**: A function that handles filtering meals based on the selected category. -
+**cartItems**: An array representing the items currently in the cart. The length of this array is displayed on the cart link.   
 
-### Code Splitting
+# MealList Component 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+ The MealList component is a core part of the LetaFoodApp that displays a list of meals based on selected categories. It fetches meal data from an external API and dynamically filters the meals based on user selection
 
-### Analyzing the Bundle Size
+. ## Overview 
+ The MealList component includes: -
+**Meal Fetching:** Fetches meal data from three categories: Breakfast, Lunch, and Dinner. -
+**Dynamic Filtering:** Filters meals based on the selected category, displaying them accordingly. - 
+**Meal Display:** Uses the MealCard component to display each meal's details and provide an option to add meals to the cart.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+  ## Features - 
+**API Integration:** Fetches meal data from a remote server using the Fetch API. -
+**Category Filtering:** Filters the meals based on the selected category, allowing users to see only the meals they are interested in. -
+**User Interaction:** Each meal is displayed as a card, enabling users to add items to their cart easily.
 
-### Making a Progressive Web App
+  ## Usage 
+ To use the MealList component, ensure the following props are passed: - **category**: A string representing the currently selected meal category (e.g., 'Breakfast', 'Lunch', 'Dinner'). - 
+**addToCart**: A function that handles adding a meal to the cart.  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Frontend:**
+  - React.js
+  - React Router
+  - CSS 
 
-### Advanced Configuration
+- **Backend:** 
+-API
+  - Node.js. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Deployment:**
+[-  Vercel the project is hosted on this platform and can be accessed using this link](https://leta-food-app.vercel.app/home)
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Thank you!
